@@ -1,0 +1,18 @@
+@defer (when apiData) {
+  <div class="container-fluid p-0">
+    <div class="row">
+      @for (valo of apiData.data; track valo.uuid) {
+        <div class="col m-4">
+          <div class="card" style="width: 18rem; background-image: url('texture.jpg'); background-size: cover; background-position: center; color: white; border-radius: 10px;">
+            <img [src]="valo.displayIcon" [alt]="valo.displayName" class="card-img-top zoom-image" style="border-radius: 100%; filter: drop-shadow(0 0 10px rgba(0,0,0, .8)); transition: transform 0.3s ease;">
+            <div class="card-body">
+              <h5 class="card-title" style="color: black">{{valo.displayName}}</h5>
+              <p class="card-text" style="color: black">{{valo.description}}</p>
+              <a href="https://www.youtube.com/watch?v=e_E9W2vsRbQ" class="btn btn-primary">Tráiler</a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}

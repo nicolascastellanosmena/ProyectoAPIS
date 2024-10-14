@@ -1,0 +1,24 @@
+@defer (when apiData) {
+  <div class="container-fluid p-0" 
+     style="background-image: url('wp.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            background-attachment: fixed;">
+    <div class="row">
+      @for (mh of apiData; track mh.id) {
+        <div class="col m-4">
+          <div class="card" style="width: 18rem; background-color: rgba(255, 255, 255, 0.5);">
+            <img [src]="mh.assets?.image" [alt]="mh.name" class="card-img-top zoom-image">
+            <div class="card-body">
+              <h5 class="card-title">{{mh.name}}</h5>
+              <p class="card-text"><strong> Rarity: </strong>{{mh.rarity}}</p>
+              <p class="card-text"><strong>Attack: </strong>{{mh.attack.display}}</p>
+              <p class="card-text"><strong>Damage Type: </strong>{{mh.damageType}}</p>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+}

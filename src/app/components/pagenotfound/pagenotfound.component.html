@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada - 404</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ocupa toda la altura de la ventana */
+        }
+
+        .background-404 {
+            background: url('404.jpg') no-repeat center center; /* Imagen de fondo centrada */
+            background-size: cover; /* Asegura que la imagen cubra todo el fondo */
+            min-height: 100vh; /* Altura mínima del contenedor igual a la altura de la ventana */
+            display: flex; /* Flexbox para centrar el contenido */
+            align-items: center; /* Centra verticalmente */
+            justify-content: center; /* Centra horizontalmente */
+            text-align: center; /* Centra el texto */
+            color: white; /* Color del texto */
+        }
+
+        .message {
+            background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente para el mensaje */
+            padding: 20px; /* Espaciado interno */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        .message h1 {
+            font-size: 4rem; /* Tamaño de fuente grande para el encabezado */
+        }
+
+        .message p {
+            font-size: 1.5rem; /* Tamaño de fuente para el mensaje */
+        }
+
+        .btn-home {
+            margin-top: 20px; /* Espaciado superior para el botón */
+        }
+    </style>
+</head>
+<body>
+    <div class="background-404">
+        <div class="message">
+            <h1>Error 404</h1>
+            <p>La página que estás buscando no se pudo encontrar.</p>
+            <a routerLinkActive="active" routerLink="/inicio" class="btn btn-primary btn-home">Volver al inicio</a>
+        </div>
+    </div>
+</body>
+</html>

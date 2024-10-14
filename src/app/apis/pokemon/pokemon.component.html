@@ -1,0 +1,19 @@
+@defer (when apiData) {
+  <div class="container-fluid p-0">
+    <div class="row">
+        @for (poke of apiData.data; track poke.name) {
+        <div class="col m-4">
+            <div class="card" style="width: 18rem;">
+              <img [src]="poke.images.small" [alt]="poke.name" class="card-img-top rotate-image">
+              <div class="card-body">
+                <h5 class="card-title">{{poke.name}}</h5>
+                <p class="card-text"><strong>Type: </strong>{{poke.types}}</p>
+                <p><strong>Subtype: </strong>{{poke.subtypes}}</p>
+                <a href="https://www.youtube.com/watch?v=IA0t8Nu6NKE" class="btn btn-danger">Tráiler</a>
+              </div>
+            </div>
+        </div>
+        }
+    </div>
+  </div>
+}

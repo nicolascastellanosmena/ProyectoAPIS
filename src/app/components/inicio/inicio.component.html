@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bienvenido al ejercicio de APIS</title>
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="jumbotron">
+        <h1 class="display-5">¡Bienvenido al ejercicio de las APIS!</h1>
+        <p class="lead">
+          Esta es una web para ver las 4 APIs disponibles. Utiliza el menú de
+          navegación para acceder a cada una de ellas.
+        </p>
+        <hr class="my-4" />
+        <p>
+          Puedes navegar a cada API utilizando los enlaces del navbar para ver
+          su contenido y funcionalidades o bien pulsando en las imágenes
+          mostradas a continuación.
+        </p>
+      </div>
+
+      
+
+      <div class="row justify-content-center">
+        <div class="col-md-5 my-4">
+          <div class="card" id="imagenCarta">
+            <a routerLink="/valorant">
+              <img
+                src="valorant.webp"
+                class="card-img-top"
+                alt="Valorant API"
+              />
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title">Valorant API</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 my-4">
+          <div class="card" id="imagenCarta">
+            <a routerLink="/monsterhunter">
+              <img
+                src="monsterhunter.jpg"
+                class="card-img-top"
+                alt="Monster Hunter API"
+              />
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title">Monster Hunter API</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 my-4">
+          <div class="card" id="imagenCarta">
+            <a routerLink="/pokemon">
+              <img src="pokemon.webp" class="card-img-top" alt="Pokémon API" />
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title">Pokémon API</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 my-4">
+          <div class="card" id="imagenCarta">
+            <a routerLink="/finalspace">
+              <img
+                src="finalspace.jpeg"
+                class="card-img-top"
+                alt="Final Space API"
+              />
+            </a>
+            <div class="card-body text-center">
+              <h5 class="card-title">Final Space API</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

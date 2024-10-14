@@ -1,0 +1,34 @@
+.card {
+  border: none;
+  background-color: transparent;
+}
+.card:hover {
+  cursor: pointer;
+}
+.rotate-image {
+  transition: transform 0.6s ease; 
+}
+
+.rotate-image:hover {
+  transform: rotateY(360deg); 
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fcb69f, #fbd786, #c9ffbf, #a1c4fd, #ff9a9e);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease-in-out infinite;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
