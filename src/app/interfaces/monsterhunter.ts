@@ -1,5 +1,4 @@
 export type MonsterHunter = Root2[];
-export type MonsterHunterOne = Root2;
 
 export interface Root2 {
   id: number;

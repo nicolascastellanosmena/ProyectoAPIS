@@ -1,37 +1,36 @@
-.card {
-  padding: 2rem;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+.card{
+    padding: 2rem;
 }
-
 .row {
-  margin: 0;
-  padding: 0;
-  background-image: url('/bg.jpg'); 
-  background-size: cover; 
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.card:hover {
-  background-color: rgba(0, 0, 0, 0.5); 
-  box-shadow: 0 4px 15px rgba(158, 22, 22, 0.7); 
-  cursor: pointer;
-}
-
-.zoom-image {
-  border-radius: 100%;
-  filter: drop-shadow(0 0 10px rgba(0,0,0, .8));
-  transition: transform 0.3s ease; 
-}
-
-.card:hover .zoom-image {
-  transform: scale(1.1); 
-}
-#button{
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-
-}
-
-#button:hover{
-  box-shadow: 0 4px 15px rgba(59, 17, 212, 0.7); 
-}
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fcb69f, #fbd786, #c9ffbf, #a1c4fd, #ff9a9e);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease-in-out infinite;
+  }
+  
+  @keyframes gradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .card:hover {
+    cursor: pointer;
+  }
+  
+  .zoom-image {
+    border-radius: 100%;
+    filter: drop-shadow(0 0 10px rgba(0,0,0, .8));
+    transition: transform 0.3s ease; 
+  }
+  
+  .card:hover .zoom-image {
+    transform: scale(1.1); 
+  }
+  
