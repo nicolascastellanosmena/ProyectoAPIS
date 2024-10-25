@@ -1,4 +1,5 @@
 export type FinalSpace = Root2[]
+export type FinalSpaceOne = Root2
 
 export interface Root2 {
   id: number

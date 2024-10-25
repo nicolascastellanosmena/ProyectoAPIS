@@ -1,5 +1,5 @@
 import { inject, Injectable } from '@angular/core';
-import { Pokemon } from '../interfaces/pokemon';
+import { Pokemon, PokemonOne } from '../interfaces/pokemon';
 import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
@@ -12,5 +12,8 @@ private http: HttpClient = inject(HttpClient);
   constructor() { }
   getCharacters(): Observable<Pokemon>{
     return this.http.get<Pokemon>(this.URL);
+  }
+  getCharacter(id:number): Observable<PokemonOne>{
+    return this.http.get<PokemonOne>(this.URL+id);
   }
 }

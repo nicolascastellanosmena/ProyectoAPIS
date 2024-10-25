@@ -2,7 +2,10 @@ export interface Valorant {
     status: number
     data: Daum[]
   }
-  
+  export interface ValorantOne {
+    status: number
+    data: Daum
+  }
   export interface Daum {
     uuid: string
     displayName: string

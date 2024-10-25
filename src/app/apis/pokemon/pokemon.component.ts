@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { PokemonService } from '../../services/pokemon.service';
 import { Pokemon } from '../../interfaces/pokemon';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-pokemon',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './pokemon.component.html',
   styleUrl: './pokemon.component.css'
 })

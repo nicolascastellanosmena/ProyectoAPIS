@@ -1,0 +1,67 @@
+@defer (when character) {
+    <div class="container-fluid">
+      <div class="card shadow mt-5">
+        <div class="card-header bg-primary-subtle">
+          <div class="card-title text-center py-2 px-1">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <h5>{{character.data.name}}</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center my-4">
+          <div class="col-auto text-center">
+            <img id="yes" class="img-fluid" src="{{character.data.images.large}}" alt="{{character.data.name}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="card-body">
+              <p class="card-text">
+                <strong>Abilities: </strong>
+                @for (item of character.data.abilities; track $index) {
+                  <span class="text-success">{{item.name}}</span>
+                }
+              </p>
+              <p class="card-text">
+                <strong>Attacks: </strong>
+                @for (item of character.data.attacks; track $index) {
+                  <span class="text-success">{{item.name}}</span>
+                }
+              </p>
+              <p class="card-text">
+                <strong>HP: </strong>
+                <span class="text-success">{{character.data.hp}}</span>
+              </p>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <div class="card-body">
+              <div class="accordion" id="accordionLoc">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAcc" aria-expanded="false" aria-controls="collapseAcc">
+                      Artists
+                    </button>
+                  </h2>
+                  <div id="collapseAcc" data-bs-parent="#accordionLoc" class="accordion-collapse collapse">
+                    <div class="accordion-body overflow-y-scroll">
+                      <ul>
+                        @for (item of character.data.artist; track item) {
+                          <li class="list-group-item small">{{item}}</li>
+                        }
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  }@placeholder (minimum 500ms) {
+    <h2 class="text-center text-primary">Cargando ...</h2>
+  }
+  

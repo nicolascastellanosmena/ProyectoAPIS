@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { ValorantService } from '../../services/valorant.service';
 import { Valorant } from '../../interfaces/valorant';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-valorant',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './valorant.component.html',
   styleUrl: './valorant.component.css'
 })

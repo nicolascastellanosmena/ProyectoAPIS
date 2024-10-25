@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
-import { Valorant } from '../interfaces/valorant';
+import { Valorant, ValorantOne } from '../interfaces/valorant';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -12,5 +12,8 @@ export class ValorantService {
   constructor() { }
   getCharacters(): Observable<Valorant>{
     return this.http.get<Valorant>(this.URL);
+  }
+  getCharacter(id:number): Observable<ValorantOne>{
+    return this.http.get<ValorantOne>(this.URL+id);
   }
 }

@@ -1,11 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { MonsterhunterService } from '../../services/monsterhunter.service';
 import { MonsterHunter } from '../../interfaces/monsterhunter';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-monsterhunter',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './monsterhunter.component.html',
   styleUrl: './monsterhunter.component.css'
 })

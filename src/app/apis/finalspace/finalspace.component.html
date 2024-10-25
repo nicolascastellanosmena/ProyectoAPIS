@@ -1,35 +1,27 @@
 @defer (when apiData) {
-  <div class="container-fluid p-0">
-    <div class="row">
-        @for (fs of apiData; track fs.id) {
-        <div class="col m-4">
-            <div class="card" style="width: 18rem;">
-            <img [src]="fs.img_url" [alt]="fs.name" class="card-img-top">
-            <div class="card-body">
-              <h5 class="card-title">{{fs.name}}</h5>
-              <p class="card-text"><strong> Abilities: </strong>{{fs.abilities}}</p>
-              <p class="card-text"><strong>Origin: </strong>{{fs.origin}}</p>
-              <p class="card-text"><strong>Species: </strong>{{fs.species}}</p>
-            </div>
-          </div>
+<div class="container-fluid p-0">
+  <div class="row">
+    @for (fs of apiData; track fs.id) {
+    <div class="col m-4">
+      <div
+        class="card"
+        style="width: 18rem"
+        [routerLink]="'/finalspace-detail/' + fs.id"
+      >
+        <img [src]="fs.img_url" [alt]="fs.name" class="card-img-top zoom-image" style="border-radius: 150px;"/>
+        <div class="card-body">
+          <h5 class="card-title">{{ fs.name }}</h5>
         </div>
-        }
+      </div>
     </div>
+    }
+  </div>
+</div>
+} @placeholder (minimum 500ms) {
+<div class="text-center text-bg-dark bg-dark py-5">
+  <div class="spinner-border text-light mb-3" role="status">
+    <span class="visually-hidden">Cargando...</span>
+  </div>
+  <h2>Cargando...</h2>
 </div>
 }
-@placeholder (minimum 500ms) {
-  <div class="text-center text-bg-dark bg-dark py-5">
-    <div class="spinner-border text-light mb-3" role="status">
-      <span class="visually-hidden">Cargando...</span>
-    </div>
-    <h2>Cargando...</h2>
-  </div>
-}
-
-
-
-
-
-
-
-
